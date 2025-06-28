@@ -225,7 +225,6 @@ a:hover {
   font-weight: 500;
   color: #333;
 }
-
 .friend-main {
   min-height: 80vh;
   display: flex;
@@ -236,7 +235,7 @@ a:hover {
   padding: 2rem 1rem;
 }
 
-.friend-section {
+.friend-card {
   background: #fff;
   padding: 2rem;
   border-radius: 12px;
@@ -244,9 +243,11 @@ a:hover {
   max-width: 600px;
   width: 100%;
   margin-bottom: 2rem;
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 
-.friend-section input {
+.friend-card input {
   padding: 0.75rem;
   width: 80%;
   max-width: 300px;
@@ -256,7 +257,7 @@ a:hover {
   font-size: 1rem;
 }
 
-.friend-section button {
+.friend-card button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: #0071e3;
@@ -267,20 +268,36 @@ a:hover {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.friend-section button:hover {
+.friend-card button:hover {
   background-color: #339dff;
   transform: scale(1.05);
 }
 
-.friend-greeting {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  max-width: 600px;
-  width: 100%;
+.friend-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
+.hidden {
+  display: none;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnim 0.4s forwards;
+}
+
+@keyframes fadeInAnim {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 .button, .choices a.button {
   padding: 1rem 2rem;
