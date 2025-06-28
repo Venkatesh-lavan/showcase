@@ -10,58 +10,30 @@
 </head>
 <body>
   <header>Venkateshwar Reddy Gaddam</header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
   <main>
     <section class="intro" data-aos="fade-up">
       <div class="intro-content">
-    <h2>Welcome!</h2>
-    <p class="intro-question">How would you describe yourself?</p>
-    <div class="choices">
-      <button onclick="handleChoice('recruiter')">Recruiter</button>
-      <button onclick="handleChoice('friend')">Friend</button>
-      <button onclick="handleChoice('visitor')">Visitor</button>
-    </div>
-  </div>
-      <div id="friendPrompt" style="display:none; text-align:center; margin-top:2rem;">
-        <p>Hey Buddy! What's your name?</p>
-        <input type="text" id="friendName" placeholder="Your name" />
-        <button onclick="greetFriend()">Submit</button>
+        <h2>Welcome!</h2>
+        <p class="intro-question">How would you describe yourself?</p>
+        <div class="choices">
+          <a href="resume.html" class="button">Recruiter</a>
+          <a href="friend.html" class="button">Friend</a>
+          <a href="visitor.html" class="button">Visitor</a>
+        </div>
       </div>
-      <div id="greeting" class="friend-socials" style="display:none;"></div>
     </section>
   </main>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-
-    function handleChoice(choice) {
-      if (choice === 'recruiter') {
-        window.location.href = 'resume.html';
-      } else if (choice === 'visitor') {
-        window.location.href = 'visitor.html';
-      } else if (choice === 'friend') {
-        document.getElementById('friendPrompt').style.display = 'block';
-      }
-    }
-
-    function greetFriend() {
-      const name = document.getElementById('friendName').value;
-      const greeting = document.getElementById('greeting');
-  greeting.innerHTML = `
-      <p>Hey ${name}! How Are you 😊</p>
-      <p>Here are my socials:</p>
-      <p>
-        <a href="https://facebook.com/venkateshlavanreddy1377" target="_blank">Facebook</a> |
-        <a href="https://instagram.com/venkatesh_lavan_redie" target="_blank">Instagram</a> |
-        <a href="https://x.com/venkatesh_lavan" target="_blank">X</a>
-      </p>
-      <h3>Explore More</h3>
-      <p>
-        <a href="resume.html" class="button">View My Resume</a>
-        <a href="projects.html" class="button">View My Projects</a>
-      </p>
-    `;
-    greeting.style.display = 'block';
-  }
-</script>
+  </script>
 </body>
 </html>
