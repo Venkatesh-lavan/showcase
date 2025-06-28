@@ -12,13 +12,15 @@
   <header>Venkateshwar Reddy Gaddam</header>
   <main>
     <section class="intro" data-aos="fade-up">
-      <h2>Welcome!</h2>
-      <p>Who are you ?</p>
-      <div class="choices">
-        <button onclick="handleChoice('recruiter')">Recruiter</button>
-        <button onclick="handleChoice('friend')">Friend</button>
-        <button onclick="handleChoice('visitor')">Visitor</button>
-      </div>
+      <div class="intro-content">
+    <h2>Welcome!</h2>
+    <p class="intro-question">How would you describe yourself?</p>
+    <div class="choices">
+      <button onclick="handleChoice('recruiter')">Recruiter</button>
+      <button onclick="handleChoice('friend')">Friend</button>
+      <button onclick="handleChoice('visitor')">Visitor</button>
+    </div>
+  </div>
       <div id="friendPrompt" style="display:none; text-align:center; margin-top:2rem;">
         <p>Hey Buddy! What's your name?</p>
         <input type="text" id="friendName" placeholder="Your name" />
