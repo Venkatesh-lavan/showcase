@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venkatesh - Friend</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <header>Venkateshwar Reddy Gaddam</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+  <main class="friend-main">
+    <section class="friend-section" data-aos="fade-up">
+      <h2>Hey Friend! 👋</h2>
+      <p>What's your name? Let's catch up.</p>
+      <input type="text" id="friendName" placeholder="Enter your name" />
+      <button onclick="showFriendGreeting()">Submit</button>
+    </section>
+
+    <section id="friendGreeting" class="friend-greeting" style="display:none;" data-aos="fade-up">
+      <!-- Greeting will appear here -->
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function showFriendGreeting() {
+      const name = document.getElementById('friendName').value.trim();
+      if (!name) return;
+
+      const greetingSection = document.getElementById('friendGreeting');
+      greetingSection.innerHTML = `
+        <h2>Hey ${name}! Long time no see 😊</h2>
+        <p>Really glad you stopped by! Let's stay connected:</p>
+        <p>
+          <a href="https://facebook.com/venkateshlavanreddy1377" target="_blank">Facebook</a> |
+          <a href="https://instagram.com/venkatesh_lavan_redie" target="_blank">Instagram</a> |
+          <a href="https://x.com/venkatesh_lavan" target="_blank">X</a>
+        </p>
+        <h3>Explore More</h3>
+        <p>
+          <a href="resume.html" class="button">View My Resume</a>
+          <a href="projects.html" class="button">View My Projects</a>
+        </p>
+      `;
+      greetingSection.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
