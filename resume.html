@@ -1,5 +1,13 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venkatesh - Resume</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <main>
-  <section>
+  <section data-aos="fade-up">
     <h2>Resume</h2>
     <h3>Summary</h3>
     <p>Software Engineer with 4+ years of experience in Python development, data analysis, and full-stack solutions. Adept at transforming raw data into insights, building secure scalable applications, and deploying ML models. Passionate about solving real-world problems with technology.</p>
@@ -31,4 +39,12 @@
       <a href="files/Profile.pdf" download>Download Profile Resume (PDF)</a><br/>
     </p>
   </section>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
+  </script>
 </main>

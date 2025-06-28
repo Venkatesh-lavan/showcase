@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Venkatesh - Projects</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>Venkatesh</header>
@@ -15,7 +17,7 @@
     <a href="contact.html">Contact</a>
   </nav>
  <main>
-  <section>
+  <section data-aos="fade-up">
     <h2>Projects</h2>
 
     <h3>Cryptography Cloud Framework (Jan 2020 - Mar 2020)</h3>
@@ -36,6 +38,14 @@
 
   </section>
 </main>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
 
 </body>
 </html>
