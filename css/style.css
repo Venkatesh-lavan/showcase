@@ -1,7 +1,6 @@
-/* Apple-inspired font and reset */
+/* Apple-inspired modern font and reset */
 body {
   margin: 0;
-  padding: 0;
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   background: linear-gradient(#ffffff, #f7f7f7);
   color: #000;
@@ -10,7 +9,7 @@ body {
 }
 
 header {
-  background: url('img/header-background.jpg') center/cover fixed;
+  background: url('/img/header-background.jpg') center/cover fixed;
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -29,6 +28,7 @@ nav {
   position: sticky;
   top: 0;
   border-bottom: 1px solid #e0e0e0;
+  z-index: 10;
 }
 
 nav a {
@@ -65,35 +65,70 @@ img.profile:hover {
   transform: scale(1.05);
 }
 
-/* 3D Card Styles */
-.card {
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
+/* Tiles / Cards with 3D hover */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tile {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
 }
 
-.card:hover {
+.tile:hover {
   transform: rotateY(5deg) rotateX(5deg) scale(1.02);
   box-shadow: 0 30px 60px rgba(0,0,0,0.2);
 }
 
-/* Headings */
+/* Recruiter Toolbox */
+.recruiter-links {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.recruiter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0071e3;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
 h2 {
   font-size: 2rem;
   font-weight: 600;
-  margin-top: 2rem;
   text-align: center;
 }
 
 h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 ul {
@@ -107,4 +142,62 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.choices button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #0071e3;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choices button:hover {
+  background-color: #005bb5;
+}
+
+.friend-socials {
+  margin-top: 2rem;
+  text-align: center;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  align-self: flex-start;
 }

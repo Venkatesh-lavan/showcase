@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venkatesh - Visitor Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <header>Venkateshwar Reddy Gaddam</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+  <main>
+    <section data-aos="fade-up">
+      <h2>Welcome !</h2>
+      <p>Hi there! Thanks for stopping by. Feel free to contact me or explore more about me below.</p>
+    </section>
+
+    <section data-aos="fade-up">
+      <h3>Quick Contact Links</h3>
+      <p>
+        <a href="mailto:venkateshlavan@outlook.com" class="button">Email Me</a>
+        <a href="https://www.linkedin.com/in/venkateshwar-reddy-gaddam/" target="_blank" class="button">Connect on LinkedIn</a>
+      </p>
+    </section>
+
+    <section data-aos="fade-up">
+      <h3>Leave Me a Message</h3>
+      <form action="https://formspree.io/f/xblyqwoj" method="POST" class="contact-form">
+        <label>
+          Your Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Your Email
+          <input type="email" name="_replyto" required>
+        </label>
+        <label>
+          Subject
+          <input type="text" name="subject" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </section>
+
+    <section data-aos="fade-up">
+      <h3>Explore More</h3>
+      <p>
+        <a href="resume.html" class="button">View My Resume</a>
+        <a href="projects.html" class="button">View My Projects</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
