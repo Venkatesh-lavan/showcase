@@ -65,6 +65,19 @@ img.profile:hover {
   transform: scale(1.05);
 }
 
+.profile-pic-container {
+  display: flex;
+  justify-content: flex-end; /* align image to right */
+  align-items: center; /* vertically center */
+  height: 100%; /* or set a specific height, e.g. 200px */
+}
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* Tiles / Cards with 3D hover */
 .tiles {
   display: grid;
