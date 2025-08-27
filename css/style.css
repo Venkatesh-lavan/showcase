@@ -78,6 +78,19 @@ img.profile:hover {
   object-fit: cover;
 }
 
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers everything horizontally */
+  gap: 20px;           /* adds space between items */
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
 /* Tiles / Cards with 3D hover */
 .tiles {
   display: grid;
